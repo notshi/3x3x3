@@ -65,6 +65,7 @@ p		{padding-bottom:2em;}
 .logo_wrap span {font-size:2em; line-height:1.25em;}
 
 .chart		{padding-bottom:4em; margin:0 auto; width:960px; text-align:center; padding-top:2em;}
+.chart.min	{padding-bottom:0;}
 .chart span	{display:block; margin:0 auto; font-size:16px; line-height:24px; padding-top:10px;}
 span.cc		{padding:0; font-size:15px;}
 
