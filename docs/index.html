@@ -1,13 +1,13 @@
 <html>
-<head><title>THE FUTURE IN COLOUR</title>
-<meta name="theme-color" content="#2a3133">
-<link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+<head><title>3x3x3 - Digging the Data</title>
+<meta name="theme-color" content="#8B808E">
+<link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon16.png" sizes="16x16">  
 <link rel="icon" type="image/png" href="favicon32.png" sizes="32x32">  
-<link rel="icon" type="image/png" href="favicon96.png" sizes="96x96">  
+<link rel="icon" type="image/png" href="favicon96.png" sizes="96x96">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <style>
-
 /*
 
 	Variables:
@@ -17,7 +17,7 @@
 	------------------------------------------------------------------
 	
 	base 			- White				
-	base_back 		- Warm yellow		
+	base_back 		- Hot mess		
 	base_back_alt 	- Brinjal		
 	base_font 		- Off black			
 
@@ -25,7 +25,7 @@
 
 :root {
   --base:#fff;
-  --base_back:#ffcc00;
+  --base_back:#ffd7e0;
   --base_back_alt:#7200e4;
   --base_font:#111;
 }
@@ -55,29 +55,35 @@ body		{min-height:100%; min-height:100vh;}
 
 */
 
-body 	{background-color:var(--base_back); color:var(--base_font); display:flex; flex-direction:column; font-family:"Capriola",Arial,sans-serif; font-size:16px; line-height:24px; position:relative; padding-top:2em; scroll-behavior:smooth;}
+body 	{background-color:var(--base); color:var(--base_font); display:flex; flex-direction:column; font-family:'Fjord One',Arial,sans-serif; font-weight:400; font-size:16px; line-height:24px; position:relative; padding-top:2em; scroll-behavior:smooth;}
+
+b		{font-weight:700;}
+i		{font-style:italic;}
 
 a		{-webkit-transition:all .2s ease-in-out; -moz-transition:all .2s ease-in-out; -o-transition:all .2s ease-in-out; -ms-transition:all .2s ease-in-out; transition:all .2s ease-in-out;}
 
 a 		{color:var(--base_font); text-decoration:none;}
-a:hover {color:var(--base); cursor:pointer; background-color:var(--base_back);}
+a:hover {cursor:pointer; background-color:var(--base_back);}
 a img 	{border:none;}
 
-.wrap		{margin:0 auto; width:960px; padding-bottom:4em;}
-.logo_wrap	{padding-bottom:4em; position:relative;}
-.logo_wrap p {color:#FFF; width:30%; font-size:2em; line-height:1.25em; position:absolute; right:2em; top:1.5em; text-align:right;}
-.pod_wrap	{margin:0 auto; width:840px;}
+p		{padding-bottom:2em;}
 
-.bio_wrap	{width:840px; margin:0 auto;}
-.bio		{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
-.bio.one	{margin-right:5%;}
-.bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto;}
-.bio_text	{margin-top:2em; font-size:14px; line-height:24px;}
-.bio_text a	{font-weight:bold; text-decoration:none;}
+.wrap		{margin:0 auto; width:960px; padding-bottom:4em; font-size:18px; line-height:26px;}
+.logo_wrap	{padding-bottom:2em; position:relative;}
+.logo_wrap span {font-size:2em; line-height:1.25em;}
 
-/*.footer		{background:url('.//data/pattern0.png'); position:absolute; bottom:-150px; left:0; background-size:cover; background-position:center; width:100%; height:400px; z-index:-1;}*/
-.footer		{flex-shrink:0; padding:4em; background:url('.//data/pattern0.png') no-repeat center center; background-size:cover; margin-top:6em; position:absolute; bottom:-150px; left:0; width:100%; height:400px; z-index:-1;}
+.chart		{padding-bottom:4em; margin:0 auto; width:960px; text-align:center; padding-top:2em;}
+.chart span	{display:block; margin:0 auto; font-size:16px; line-height:24px; padding-top:10px;}
 
+.bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto; margin-bottom:1em;}
+
+.att		{font-size:14px; line-height:18px; padding-bottom:2em;}
+.tit		{border-bottom:1px solid var(--base_back_alt); margin-bottom:1em;}
+ol			{list-style-type:decimal; list-style-position:inside;}
+ol li		{padding-bottom:0.25em;}
+.att p		{display:inline;}
+
+.footer		{display:block; width:100%;}
 
 /*
 
@@ -93,11 +99,6 @@ a img 	{border:none;}
   background-position: center;
 }
 
-.bio_img.edafe {
-  background-image: url('.//data/edafe.jpg');
-  background-size: cover;
-  background-position: center;
-}
 
 @supports (mix-blend-mode: multiply) {
   .bio_img {
@@ -141,29 +142,111 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.footer	{bottom:0; height:450px;}
 
 }
-
 </style></head>
 <body><div class="wrap">
 	<div class="logo_wrap">
-		<img src=".//data/logo600.png" width="600">
-		<p>Women of colour chewing the fat about the future from our perspective.</p>
+		<span>Making sense of the grantmaking sector by using GrantNav from a civilian’s point of view.</span>
 	</div>
-	<div class="pod_wrap">
-		<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fthefutureincolour%2Fepisode-1-there-are-black-people-in-the-future%2F" frameborder="0" ></iframe>
-	</div>
-	<div class="bio_wrap">
-		<div class="bio one">
-			<div class="bio_img edafe"></div>
-			<div class="bio_text">
-				<a href="http://twitter.com/ekoner">Edafe Onerhime</a> is a consultant on Data Science and Data Analysis who has over 20 years of experience answering difficult questions about open data. She has helped governments, charities and businesses make better decisions and build stronger relationships by understanding, using and sharing their data.
-			</div>
-		</div><div class="bio">
-			<div class="bio_img shi"></div>
-			<div class="bio_text">
-				Rooted at the intersection of technology, open data, art &amp; music, <a href="http://twitter.com/shi">shi Blank</a> is a feral games developer who taught herself how to code. A fierce believer of assessible knowledge, shi mentors kids and parents regularly at code clubs and is currently creating a women-focused makerspace in the city they are based in.
-			</div>
-		</div>
-	</div>
-</div><div class="footer"></div>
-</body>
+	<div class="chart"></span>
+    <img src=".//data/screenshot.png" width="960"/>
+</div>
+
+<p>I&#39;m fairly new to the concept of grant making.</p>
+<p>I am unfamiliar with the way they run, how they are regulated, if at all, where and how funders get funding, who benefits from them - you get the idea. I do know they are a big deal; big money supporting big issues, causes and projects for all levels of people and organisations.</p>
+<p>This was more a learning exercise than investigation about a sector that is playing a huge role in the everyday of so many individuals, largely behind closed doors. With the 360Giving open standard, this will hopefully no longer be the case.</p>
+<p>I decided on a process of using GrantNav as a civilian; whittling down my searches using the filters, downloading the CSVs and tallying up the results in Google Sheets. I used Inkscape to create the visualisations - on the plus side, the graphs were not generic but designing took a week to finalise.</p>
+<p>Majority of the time was spent pondering on just the one question - what could be shown from the data?</p>
+<p>There is quite a substantial amount of data to process manually. At first, I thought it would be interesting to pit Regions against each other - mostly to see what is being funded the most in each - but the overviews showed that most of the funding went to the same thing, regardless of region; highway maintenance.</p>
+<p>Instead I decided to limit the search to the years post-2000 for Yorkshire and Humber so that brought it down to slightly over 20k to work with. Why those two specific filters? I live in Bradford so it would interesting to know what’s being funded around me after the millennium.</p>
+<p>Trying to make sense of the data at this point became a struggle - I wasn’t sure what I wanted to visualise; was there a story to be told from this chunk of information? Tabs of csvs were imported and analysed - 20k grants is still a huge amount to process manually - maybe I need to look closer.</p>
+<p>It took a fair few goes of iteration and redoing all the graphs several times before the results became manageable. This was mostly down to a misinterpretation of the GrantNav filtering system where the sorting was assumed to be based on the highest amount first - this was not the case since it is sorted by the highest instance of each filter. It was the middle of the week before I realised my mistake.</p>
+
+	<div class="chart"><span id="fig1"></span>
+    <img src=".//data/area_chart.png" width="960"/>
+    <span>Figure 1. Top 3 Funders area graph</span>
+</div>
+
+<p>This is an area graph that shows you how deep The Big Lottery Fund’s pockets are compared to everything else but they also give to far more recipients than any other funder in the region.</p>
+<p>As an artist who benefits from some type of funding, the concept of financial support from gambling addiction is highly conflicting. <i>Is this a necessary evil?</i></p>
+<p>I looked at funders that gave at least £10 million - this shrunk the results to 5 funders which included grants for highway maintenance and funding for buildings. Plotting the line graphs, I notice that not all funders publish equally; highway maintenance account for a huge amount of funding (second largest) but for the shortest amount of time (1 year). I’ve decided not to include the funders of either grants so this left me with the top 3 funders. I thought this seemed like a good direction to head for - 3 funders, 3 districts, 3 regions.</p>
+
+	<div class="chart"><span id="fig2"></span>
+    <img src=".//data/bar_chart.png" width="960"/>
+    <span>Figure 2. Top 3 Recipient per Funders bar chart</span>
+</div>
+
+<p>The top 3 recipients for the pink bar (The Big Lottery) accounts for 14% of all the funding. On average, each recipient receives about £56k but these top recipients received £49 million.</p>
+<p>However, this really isn&#39;t a fair assessment as the largest grant is for a duration of 10 years.</p>
+
+	<div class="chart"><span id="fig3"></span>
+    <img src=".//data/org_bar_chart.png" width="640"/>
+    <span>Figure 3. Organisation types</span>
+</div>
+
+<p>Most of the funding went to Community Interest Companies and funded by The Big Lottery.</p>
+<p>Within the dataset, the Organisation Type field is usually filled with, “Charity” or left empty so I had to look up the NCVO Almanac to figure out what organisation types are out there - even then, the tome of knowledge was overwhelming and there isn&#39;t an official standard to refer to.</p>
+<p>In the end, I had to do search on each Recipient and derive a type from their website or the Charity Search. To be fair, most funders do include in their names, unless you’re The Big Lottery or any of the funders included in this list.</p>
+
+	<div class="chart"><span id="fig4"></span>
+    <img src=".//data/theme_chart.png" width="960"/>
+    <span>Figure 4. Which themes are funded where for how long and how much</span>
+</div>
+
+<p>Themes were hard to determine. I couldn’t find an official list of classification to use as reference so had to use well known themes found in reports and findings listed in the Resources links.
+Laying out the grants with all the context on a map made it easier to understand the region. I’m sure if all 20k grants were laid out here, you might find something worthwhile to consider.</p>
+<p>On the other hand, it’ll just end up being a really crowded map. One thing’s for sure, I’ve learnt a great deal more about the geography of the region by doing this exercise.</p>
+<p>I think what would be more interesting is if another dataset is used in conjunction with this view. Sheffield really stands out in its diversity of themes.</p>
+
+	<div class="chart"><span id="fig5"></span>
+    <img src=".//data/map_chart.png" width="640"/>
+    <span>Figure 5. Intensity map based on average amount awarded per year</span>
+</div>
+
+<p>Funded programmes run for a wide range of durations - mostly 12 months. I wanted to know the index of a district to see how much is being funded on average.</p>
+<p>At this point, it would be really useful to compare a similar view with somewhere like London, Scotland or Wales and maybe combine it with the deprivation index.</p>
+
+	<div class="chart"><span id="fig6"></span>
+    <img src=".//data/district_chart.png" width="460"/>
+    <span>Figure 6. Districts comparison</span>
+</div>
+
+<p>The top 3 districts make up 50% of the entire funding amount but just over 30% in number of grants in the Region. Leeds and Sheffield were granted similar amounts with Bradford at under half the amount of either funders.</p>
+<p>It’s also worth noting that 40% of Bradford’s entire funding amount is attributed to just the one recipient.</p>
+<p>So what did I learn? It’s fantastic that funders are being more open about the way they operate but there are still major gaps in the data that limit the full potential of the cause. For example, the largest grant to Bradford which accounts for 8% of the entire Big Lottery budget went to a project without a description, denying us some context of this grand gesture unless one trawls the internet for answers.</p>
+<p><a href=".//data/3x3x3.pdf">A pdf <i>(311.6kb)</i> of the entire visualisation lives here.</a></p>
+<p>The End.</p>
+
+	<div class="chart"><span id="fig7"></span>
+	<div class="bio_img shi"></div>
+	<span>Published Monday, 23 July 2018 by <a href="http://twitter.com/shi">shi Blank</a>.</span>
+</div>
+
+	<div class="att">
+<div class="tit">Attribution</div>
+
+<ol>
+<li><p><a href="http://beta.charitycommission.gov.uk/">Charity Search</a></p>
+</li>
+<li><p><a href="https://data.ncvo.org.uk/a/almanac18/beneficiaries-3/">NCVO Almanac</a></p>
+</li>
+<li><p>Contains data from <a href="http://grantnav.threesixtygiving.org/">GrantNav</a> a <a href="http://www.threesixtygiving.org/">360Giving</a> application released under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Sharealike license (CC-BY-SA)</a>.</p>
+</li>
+<li><p><a href="https://fonts.google.com/specimen/Fjord+One">Fjord One by Viktoriya Grabowska is a serif typeface designed with printed books in mind, and particularly intended for long texts in small print sizes.</a></p>
+</li>
+<li><p><a href="https://commons.wikimedia.org/wiki/File:England,_administrative_divisions_(regions%2Badmin_counties%2Bmet_boroughs)_-_de_-_colored_(-London_zoom).svg">TUBS CC BY-SA 3.0, from Wikimedia Commons</a></p>
+</li>
+<li><p><a href="https://commons.wikimedia.org/wiki/File:Yorkshire_and_the_Humber_counties_2009_map.svg">Dr Greg and Nilfanion. Contains Ordnance Survey data © Crown copyright and database right 2011</a></p>
+</div>
+</li>
+</ol>
+
+	<div class="footer">
+	<a href="#">Top of page</a>
+</div>
+
+
+
+
+
+</div></body>
 </html>

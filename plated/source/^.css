@@ -9,7 +9,7 @@
 	------------------------------------------------------------------
 	
 	base 			- White				
-	base_back 		- Warm yellow		
+	base_back 		- Hot mess		
 	base_back_alt 	- Brinjal		
 	base_font 		- Off black			
 
@@ -17,7 +17,7 @@
 
 :root {
   --base:#fff;
-  --base_back:#ffcc00;
+  --base_back:#ffd7e0;
   --base_back_alt:#7200e4;
   --base_font:#111;
 }
@@ -47,29 +47,35 @@ body		{min-height:100%; min-height:100vh;}
 
 */
 
-body 	{background-color:var(--base_back); color:var(--base_font); display:flex; flex-direction:column; font-family:"Capriola",Arial,sans-serif; font-size:16px; line-height:24px; position:relative; padding-top:2em; scroll-behavior:smooth;}
+body 	{background-color:var(--base); color:var(--base_font); display:flex; flex-direction:column; font-family:'Fjord One',Arial,sans-serif; font-weight:400; font-size:16px; line-height:24px; position:relative; padding-top:2em; scroll-behavior:smooth;}
+
+b		{font-weight:700;}
+i		{font-style:italic;}
 
 a		{-webkit-transition:all .2s ease-in-out; -moz-transition:all .2s ease-in-out; -o-transition:all .2s ease-in-out; -ms-transition:all .2s ease-in-out; transition:all .2s ease-in-out;}
 
 a 		{color:var(--base_font); text-decoration:none;}
-a:hover {color:var(--base); cursor:pointer; background-color:var(--base_back);}
+a:hover {cursor:pointer; background-color:var(--base_back);}
 a img 	{border:none;}
 
-.wrap		{margin:0 auto; width:960px; padding-bottom:4em;}
-.logo_wrap	{padding-bottom:4em; position:relative;}
-.logo_wrap p {color:#FFF; width:30%; font-size:2em; line-height:1.25em; position:absolute; right:2em; top:1.5em; text-align:right;}
-.pod_wrap	{margin:0 auto; width:840px;}
+p		{padding-bottom:2em;}
 
-.bio_wrap	{width:840px; margin:0 auto;}
-.bio		{display:inline-block; vertical-align:top; width:47.5%; background-color:var(--base); padding:2.5em; margin-top:4em;}
-.bio.one	{margin-right:5%;}
-.bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto;}
-.bio_text	{margin-top:2em; font-size:14px; line-height:24px;}
-.bio_text a	{font-weight:bold; text-decoration:none;}
+.wrap		{margin:0 auto; width:960px; padding-bottom:4em; font-size:18px; line-height:26px;}
+.logo_wrap	{padding-bottom:2em; position:relative;}
+.logo_wrap span {font-size:2em; line-height:1.25em;}
 
-/*.footer		{background:url('{_root}/data/pattern0.png'); position:absolute; bottom:-150px; left:0; background-size:cover; background-position:center; width:100%; height:400px; z-index:-1;}*/
-.footer		{flex-shrink:0; padding:4em; background:url('{_root}/data/pattern0.png') no-repeat center center; background-size:cover; margin-top:6em; position:absolute; bottom:-150px; left:0; width:100%; height:400px; z-index:-1;}
+.chart		{padding-bottom:4em; margin:0 auto; width:960px; text-align:center; padding-top:2em;}
+.chart span	{display:block; margin:0 auto; font-size:16px; line-height:24px; padding-top:10px;}
 
+.bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto; margin-bottom:1em;}
+
+.att		{font-size:14px; line-height:18px; padding-bottom:2em;}
+.tit		{border-bottom:1px solid var(--base_back_alt); margin-bottom:1em;}
+ol			{list-style-type:decimal; list-style-position:inside;}
+ol li		{padding-bottom:0.25em;}
+.att p		{display:inline;}
+
+.footer		{display:block; width:100%;}
 
 /*
 
@@ -85,11 +91,6 @@ a img 	{border:none;}
   background-position: center;
 }
 
-.bio_img.edafe {
-  background-image: url('{_root}/data/edafe.jpg');
-  background-size: cover;
-  background-position: center;
-}
 
 @supports (mix-blend-mode: multiply) {
   .bio_img {
