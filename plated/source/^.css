@@ -66,6 +66,7 @@ p		{padding-bottom:2em;}
 
 .chart		{padding-bottom:4em; margin:0 auto; width:960px; text-align:center; padding-top:2em;}
 .chart span	{display:block; margin:0 auto; font-size:16px; line-height:24px; padding-top:10px;}
+span.cc		{padding:0; font-size:15px;}
 
 .bio_img	{text-align:center; display:block; width:200px; height:200px; border-radius:250px; margin:0 auto; margin-bottom:1em;}
 
@@ -75,7 +76,9 @@ ol			{list-style-type:decimal; list-style-position:inside;}
 ol li		{padding-bottom:0.25em;}
 .att p		{display:inline;}
 
-.footer		{display:block; width:100%;}
+.con		{font-size:14px; line-height:18px;}
+
+.footer		{display:block; width:100%; text-align:right;}
 
 /*
 
